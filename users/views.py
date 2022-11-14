@@ -7,7 +7,7 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.views import APIView
 from .permissions import IsBrandUser, IsInfluencerUser, IsEmployeeUser
 
-class FreelanceSignupView(generics.GenericAPIView):
+class InfluencerSignupView(generics.GenericAPIView):
     serializer_class=InfluencerSignupSerializer
     def post(self, request, *args, **kwargs):
         serializer=self.get_serializer(data=request.data)
